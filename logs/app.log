@@ -1,0 +1,168 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.ppsu:spring-hibernate-xml-demo >-----------------
+[INFO] Building spring-hibernate-xml-demo 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ spring-hibernate-xml-demo ---
+[INFO] Deleting E:\Ravi_Workspace\spring-hibernate-xml-demo\target
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ spring-hibernate-xml-demo ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ spring-hibernate-xml-demo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 5 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ spring-hibernate-xml-demo ---
+[INFO] skip non existing resourceDirectory E:\Ravi_Workspace\spring-hibernate-xml-demo\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ spring-hibernate-xml-demo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ spring-hibernate-xml-demo ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- war:3.4.0:war (default-war) @ spring-hibernate-xml-demo ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [spring-hibernate-xml-demo] in [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\spring-hibernate-xml-demo]
+[INFO] Processing war project
+[INFO] Copying webapp resources [E:\Ravi_Workspace\spring-hibernate-xml-demo\src\main\webapp]
+[INFO] Building war: E:\Ravi_Workspace\spring-hibernate-xml-demo\target\spring-hibernate-xml-demo.war
+[INFO] 
+[INFO] --- cargo:1.10.14:run (default-cli) @ spring-hibernate-xml-demo ---
+[INFO] Resolved container artifact org.codehaus.cargo:cargo-core-container-tomcat:jar:1.10.14 for container tomcat10x
+[INFO] Injecting container configuration property [cargo.rmi.port] based on the associated Maven project property
+[INFO] Injecting container configuration property [cargo.servlet.port] based on the associated Maven project property
+[INFO] Injecting container configuration property [cargo.tomcat.ajp.port] based on the associated Maven project property
+[INFO] Tomcat 10.1.30 starting...
+[INFO] Deploying [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\spring-hibernate-xml-demo.war] to [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\webapps]...
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.tomcat.util.digester.SetPropertiesRule begin
+[INFO] WARNING: Match [Server/Service/Connector] failed to set property [emptySessionPath] to [cargo.tomcat.connector.emptySessionPath]
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Server version name:   Apache Tomcat/10.1.30
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Server built:          Sep 13 2024 20:26:16 UTC
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Server version number: 10.1.30.0
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: OS Name:               Windows 10
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: OS Version:            10.0
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Architecture:          amd64
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Java Home:             C:\Users\Admin\.jdks\temurin-21
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: JVM Version:           21.0.12.1+1-LTS
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: JVM Vendor:            Eclipse Adoptium
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: CATALINA_BASE:         E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: CATALINA_HOME:         E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\installs\tomcat-10.1.30\apache-tomcat-10.1.30
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Command line argument: -Xms128m
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Command line argument: -Xmx512m
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Command line argument: -Dcatalina.home=E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\installs\tomcat-10.1.30\apache-tomcat-10.1.30
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Command line argument: -Dcatalina.base=E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Command line argument: -Djava.io.tmpdir=E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\temp
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] INFO: Command line argument: -Djava.util.logging.config.file=E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\conf/logging.properties
+[INFO] Oct 05, 2026 7:53:45 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+[INFO] INFO: The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Users\Admin\.jdks\temurin-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\Admin\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\Admin\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-21.0.12.101-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Admin\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Admin\AppData\Local\Programs\Python\Python312\;C:\Users\Admin\AppData\Local\Programs\Python\Launcher\;C:\Users\Admin\.local\bin;C:\Users\Admin\.jdks\temurin-21\bin;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2026.2.3\bin;C:\Users\Admin\AppData\Local\Programs\DockerDesktop\resources\bin;C:\Users\Admin\AppData\Roaming\npm;c:\Users\Admin\.vscode\extensions\vscjava.vscode-java-debug-0.59.0\bundled\scripts\noConfigScripts;.]
+[INFO] Oct 05, 2026 7:53:46 AM org.apache.coyote.AbstractProtocol init
+[INFO] INFO: Initializing ProtocolHandler ["http-nio-8081"]
+[INFO] Oct 05, 2026 7:53:46 AM org.apache.catalina.startup.Catalina load
+[INFO] INFO: Server initialization in [1548] milliseconds
+[INFO] Oct 05, 2026 7:53:46 AM org.apache.catalina.core.StandardService startInternal
+[INFO] INFO: Starting service [Catalina]
+[INFO] Oct 05, 2026 7:53:46 AM org.apache.catalina.core.StandardEngine startInternal
+[INFO] INFO: Starting Servlet engine: [Apache Tomcat/10.1.30]
+[INFO] Oct 05, 2026 7:53:46 AM org.apache.catalina.startup.HostConfig deployWAR
+[INFO] INFO: Deploying web application archive [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\webapps\cargocpc.war]
+[INFO] Oct 05, 2026 7:53:47 AM org.apache.catalina.startup.HostConfig deployWAR
+[INFO] INFO: Deployment of web application archive [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\webapps\cargocpc.war] has finished in [1,031] ms
+[INFO] Oct 05, 2026 7:53:47 AM org.apache.catalina.startup.HostConfig deployWAR
+[INFO] INFO: Deploying web application archive [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\webapps\spring-hibernate-xml-demo.war]
+[INFO] Oct 05, 2026 7:53:58 AM org.apache.jasper.servlet.TldScanner scanJars
+[INFO] INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO] Oct 05, 2026 7:53:59 AM org.apache.catalina.core.ApplicationContext log
+[INFO] INFO: No Spring WebApplicationInitializer types detected on classpath
+[INFO] Oct 05, 2026 7:53:59 AM org.apache.catalina.core.ApplicationContext log
+[INFO] INFO: Initializing Spring root WebApplicationContext
+[INFO] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[INFO] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[INFO] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[INFO] Oct 05, 2026 7:54:02 AM org.hibernate.Version logVersion
+[INFO] INFO: HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO] Oct 05, 2026 7:54:05 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+[INFO] INFO: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO] Oct 05, 2026 7:54:06 AM org.hibernate.dialect.Dialect <init>
+[INFO] INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO] Hibernate: 
+[INFO]     
+[INFO]     create table students (
+[INFO]        id bigint generated by default as identity,
+[INFO]         course varchar(255),
+[INFO]         email varchar(255) not null,
+[INFO]         name varchar(255) not null,
+[INFO]         primary key (id)
+[INFO]     )
+[INFO] Oct 05, 2026 7:54:11 AM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+[INFO] INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO] Oct 05, 2026 7:54:12 AM org.apache.catalina.core.ApplicationContext log
+[INFO] INFO: Initializing Spring DispatcherServlet 'dispatcher'
+[INFO] Oct 05, 2026 7:54:15 AM org.apache.catalina.startup.HostConfig deployWAR
+[INFO] INFO: Deployment of web application archive [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\webapps\spring-hibernate-xml-demo.war] has finished in [27,173] ms
+[INFO] Oct 05, 2026 7:54:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+[INFO] INFO: Deploying web application directory [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\webapps\host-manager]
+[INFO] Oct 05, 2026 7:54:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+[INFO] INFO: Deployment of web application directory [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\webapps\host-manager] has finished in [417] ms
+[INFO] Oct 05, 2026 7:54:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+[INFO] INFO: Deploying web application directory [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\webapps\manager]
+[INFO] Oct 05, 2026 7:54:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+[INFO] INFO: Deployment of web application directory [E:\Ravi_Workspace\spring-hibernate-xml-demo\target\cargo\configurations\tomcat10x\webapps\manager] has finished in [108] ms
+[INFO] Oct 05, 2026 7:54:15 AM org.apache.coyote.AbstractProtocol start
+[INFO] INFO: Starting ProtocolHandler ["http-nio-8081"]
+[INFO] Oct 05, 2026 7:54:17 AM org.apache.catalina.startup.Catalina start
+[INFO] INFO: Server startup in [30366] milliseconds
+[INFO] Tomcat 10.1.30 started on port [8081]
+[INFO] The cargo:run mojo will wait until a TERM signal is received, container will also be stopped at that point.
+[INFO] Hibernate: 
+[INFO]     select
+[INFO]         student0_.id as id1_0_,
+[INFO]         student0_.course as course2_0_,
+[INFO]         student0_.email as email3_0_,
+[INFO]         student0_.name as name4_0_ 
+[INFO]     from
+[INFO]         students student0_ 
+[INFO]     order by
+[INFO]         student0_.id
+[INFO] Hibernate: 
+[INFO]     select
+[INFO]         student0_.id as id1_0_,
+[INFO]         student0_.course as course2_0_,
+[INFO]         student0_.email as email3_0_,
+[INFO]         student0_.name as name4_0_ 
+[INFO]     from
+[INFO]         students student0_ 
+[INFO]     order by
+[INFO]         student0_.id
+[INFO] Hibernate: 
+[INFO]     select
+[INFO]         student0_.id as id1_0_,
+[INFO]         student0_.course as course2_0_,
+[INFO]         student0_.email as email3_0_,
+[INFO]         student0_.name as name4_0_ 
+[INFO]     from
+[INFO]         students student0_ 
+[INFO]     order by
+[INFO]         student0_.id

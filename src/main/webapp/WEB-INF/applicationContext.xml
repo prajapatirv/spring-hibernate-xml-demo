@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/tx      http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+  <!-- STEP 1: load db.properties so ${db.*} can be used below.
+       Credentials live outside Java code. Environment variables are also resolved. -->
+  <context:property-placeholder location="classpath:db.properties"/>
+
+  <!-- STEP 2: DataSource = a pool of ready database connections (HikariCP).
+       The factory tries the primary DB first and falls back to H2 when it is unreachable. -->
+  <bean id="dataSourceFactory" class="com.ppsu.xmldemo.config.FallbackDataSourceFactory">
+    <property name="primaryDriver"     value="${primary.driver}"/>
+    <property name="primaryUrl"        value="${primary.url}"/>
+    <property name="primaryUsername"   value="${primary.username}"/>
+    <property name="primaryPassword"   value="${primary.password}"/>
+    <property name="fallbackDriver"    value="${fallback.driver}"/>
+    <property name="fallbackUrl"       value="${fallback.url}"/>
+    <property name="fallbackUsername"  value="${fallback.username}"/>
+    <property name="fallbackPassword"  value="${fallback.password}"/>
+  </bean>
+  <bean id="dataSource" factory-bean="dataSourceFactory" factory-method="getObject"/>
+
+  <!-- STEP 3: SessionFactory = ONE per app, heavy, thread-safe. Built once at startup.
+       H2 fallback: create/alter tables. Primary DB: schema "app", validate only. -->
+  <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+    <property name="dataSource" ref="dataSource"/>
+    <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+    <property name="hibernateProperties">
+      <props>
+        <prop key="hibernate.hbm2ddl.auto">#{dataSourceFactory.fallback ? 'update' : 'validate'}</prop>
+        <prop key="hibernate.default_schema">#{dataSourceFactory.fallback ? 'PUBLIC' : 'app'}</prop>
+      </props>
+    </property>
+  </bean>
+
+  <!-- STEP 4: transaction manager opens/commits the Session for @Transactional methods -->
+  <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+    <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+  <tx:annotation-driven transaction-manager="transactionManager"/>
+
+  <!-- STEP 5: DAO and service wired by XML property injection (no annotations) -->
+  <bean id="studentDao" class="com.ppsu.xmldemo.dao.StudentDao">
+    <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+  <bean id="studentService" class="com.ppsu.xmldemo.service.StudentService">
+    <property name="studentDao" ref="studentDao"/>
+  </bean>
+  <bean id="dbCheck" class="com.ppsu.xmldemo.service.DbCheck">
+    <property name="dataSource" ref="dataSource"/>
+  </bean>
+</beans>

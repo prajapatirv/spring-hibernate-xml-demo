@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- Print the SQL Hibernate generates -->
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+    <!-- update = create/alter tables (standalone H2 only).
+         Linked mode: use "validate" plus hibernate.default_schema=app -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <!-- Entities are registered here -->
+    <mapping class="com.ppsu.xmldemo.model.Student"/>
+  </session-factory>
+</hibernate-configuration>

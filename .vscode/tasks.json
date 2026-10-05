@@ -1,0 +1,10 @@
+{
+  "version": "2.0.0",
+  "tasks": [{
+    "label": "Run XML demo",
+    "type": "shell",
+    "command": "mvn clean package cargo:run",
+    "options": { "cwd": "${workspaceFolder}" },
+    "problemMatcher": []
+  }]
+}
